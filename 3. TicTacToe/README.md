@@ -14,6 +14,6 @@ a.exe
 ```
 
 ## Screenshot
-![welcome]()
-![Board]()
-![Select]()
+![welcome](https://github.com/Rahul0Singh0/CPP-Projects/blob/main/3.%20TicTacToe/Images/home.PNG)
+![Board](https://github.com/Rahul0Singh0/CPP-Projects/blob/main/3.%20TicTacToe/Images/Board.PNG)
+![Select](https://github.com/Rahul0Singh0/CPP-Projects/blob/main/3.%20TicTacToe/Images/selected%20grid.PNG)
