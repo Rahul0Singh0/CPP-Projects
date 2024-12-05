@@ -6,7 +6,7 @@
 3. Navigate to directory where this file located.
 4. Compile this code:
 ```
-g++ Main.c
+g++ Main.cpp
 ```
 5. Run the compiled code:
 ```
