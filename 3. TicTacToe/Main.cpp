@@ -9,6 +9,7 @@ class Game {
     Board b;
 public:
     Game() {
+        system("cls");
         cout<<"Welcome to Tic-Tac-Toe Two Player Game\n";
         cout<<"First Player: X\nSecond Player: O\n";
         player = 'X';
@@ -16,18 +17,38 @@ public:
     void start() {
         b.printBoard();
     }
-    bool winGame() {
-
+    bool checkWin() {
+        return b.checkWin(player);
+    }
+    bool isFull() {
+        return b.isFull();
     }
     void play() {
-        int grid;
+        int location;
         while(true) {
+            if(isFull()) {
+                cout<<"Draw the game!\n\n";
+                system("pause");
+                return;
+            }
+
             cout<<"Player "<<player<<"\n";
             cout<<"Enter your choice grid: ";
-            cin>>grid;
-            b.updateBoard(grid, player);
+            cin>>location;
+            if(location < 1 && location > 9) {
+                cout<<"Invalid location!!!\n";
+                cout<<"Try Again: ";
+            } 
+            
+            b.updateBoard(location, player);
+
+            if(checkWin()) {
+                cout<<player<<" won the game!\n\n";
+                system("pause");
+                return;
+            } 
+
             player = player == 'X' ? 'O' : 'X'; // player switched
-            // return;
         }
     }
 };
